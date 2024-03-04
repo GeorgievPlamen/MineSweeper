@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Minesweeper
 {
-    public partial class MineSweeper : Form
+    public partial class Start : Form
     {
-        public MineSweeper()
+        public Start()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace Minesweeper
                 difficulty = Difficulty.Easy;
             } 
             else if(medium.Checked)
-            {
+            { 
                 difficulty = Difficulty.Medium;
             }
             else 
@@ -35,7 +35,10 @@ namespace Minesweeper
             }
 
             int lives = Convert.ToInt32(numberOfLives.Value);
-            var game = new GameConfig(difficulty, lives, this);
+            var gameConfig = new GameConfig(difficulty, lives, this);
+
+            Game game = new Game(gameConfig);
+            game.Show();
         }
     }
 }

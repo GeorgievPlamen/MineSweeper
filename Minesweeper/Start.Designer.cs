@@ -1,6 +1,6 @@
 ﻿namespace Minesweeper
 {
-    partial class MineSweeper
+    partial class Start
     {
         /// <summary>
         /// Required designer variable.
@@ -103,7 +103,7 @@
             this.Lives.TabIndex = 6;
             this.Lives.Text = "Lives";
             // 
-            // MineSweeper
+            // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +114,7 @@
             this.Controls.Add(this.hard);
             this.Controls.Add(this.medium);
             this.Controls.Add(this.easy);
-            this.Name = "MineSweeper";
+            this.Name = "Start";
             this.Text = "MineSweeper";
             ((System.ComponentModel.ISupportInitialize)(this.numberOfLives)).EndInit();
             this.ResumeLayout(false);

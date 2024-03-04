@@ -39,7 +39,6 @@ namespace Minesweeper.Setup
             }
             Lives = lives;
             Tiles = new Button[yDim, xDim];
-            MessageBox.Show(parent,$"Difficulty is {difficulty}, Lives amount is {lives},x= {xDim},y= {yDim},Mines = {Mines}");
         }
 
 
