@@ -74,12 +74,13 @@
             // 
             // Play
             // 
+            this.Play.BackColor = System.Drawing.SystemColors.Control;
             this.Play.Location = new System.Drawing.Point(281, 327);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(87, 48);
             this.Play.TabIndex = 4;
             this.Play.Text = "Play";
-            this.Play.UseVisualStyleBackColor = true;
+            this.Play.UseVisualStyleBackColor = false;
             this.Play.Click += new System.EventHandler(this.Play_Click);
             // 
             // numberOfLives
@@ -89,7 +90,7 @@
             this.numberOfLives.Size = new System.Drawing.Size(120, 29);
             this.numberOfLives.TabIndex = 5;
             this.numberOfLives.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});

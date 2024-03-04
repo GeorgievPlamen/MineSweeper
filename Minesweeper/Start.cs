@@ -1,12 +1,5 @@
 ﻿using Minesweeper.Setup;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Minesweeper
@@ -38,6 +31,10 @@ namespace Minesweeper
             var gameConfig = new GameConfig(difficulty, lives, this);
 
             Game game = new Game(gameConfig);
+            int height = (gameConfig.yDim * 30) + 100;
+            int width = (gameConfig.xDim * 30) + 20;
+            game.Height = height; 
+            game.Width = width;
             game.Show();
         }
     }

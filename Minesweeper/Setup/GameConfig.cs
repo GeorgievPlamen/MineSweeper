@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace Minesweeper.Setup
@@ -16,7 +15,6 @@ namespace Minesweeper.Setup
         public int xDim { get; }
         public int yDim { get; }
         public int Mines { get; set; }
-        public Button[,] Tiles { get;}
         public GameConfig(Difficulty difficulty, int lives, Control parent)
         {
             switch (difficulty)
@@ -34,33 +32,10 @@ namespace Minesweeper.Setup
                 case Difficulty.Hard:
                     xDim = 30;
                     yDim = 16;
-                    Mines = 99;
+                    Mines = 75;
                     break;
             }
             Lives = lives;
-            Tiles = new Button[yDim, xDim];
         }
-
-
-        public void GenerateButtons(Control parent)
-        {
-            int celNr = 1;
-
-            for (int y = 0; y < yDim; y++)
-            {
-                for (int x = 0; x < xDim; x++)
-                {
-                    Tiles[y, x] = new Button()
-                    {
-                        Size = new Size(20, 20),
-                        Location = new Point(y * 20 + 10,
-                                              x * 20 + 10),
-                        Parent = parent
-                    };
-                    Tiles[y, x].Tag = celNr++;
-                }
-            }
-        }
-
     }
 }
